@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <title>Ristorante Con Fusion</title>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Ristorante Con Fusion</title>
+    
 </head>
 
 <body>
@@ -21,17 +22,63 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="./index.html" class="navbar-brand mr-auto"><img src="img/logo.png" height="30" width="41" ></a>
+            <a class="navbar-brand " href="./index.html" ><img src="img/logo.png" height="30" width="41" ></a>
             <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="#" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                <li class="nav-item"><a href="./aboutus.html" class="nav-link"><span class="fa fa-info fa-lg"></span> About</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-            </ul>
-        </div>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a href="./index.html" class="nav-link"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a href="./aboutus.html" class="nav-link"><span class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
+            </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"> Login</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="inputUsername">Email :</label>
+                                <input type="email" class="form-control" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="inputPassword">Email :</label>
+                                <input type="password" class="form-control" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember Me</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -43,13 +90,65 @@
                     <img src="img/logo.png" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-warning btn-block" href="#form" role="button"><strong>Reserve Table</strong></a>
+                    <a class="btn btn-warning nav-link btn-block" 
+                    data-toggle="modal" data-target="#reserveTableModal" ><strong>Reserve Table</strong></a>
                 </div>
             </div>
         </div>
     </header>
 
+    
+
     <div class="container">
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="img/uthappizza.png" alt="uthappizza" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Uthappizza
+                                    <span class="badge badge-danger">HOT</span>
+                                    <span class="badge badge-pill badge-secondary">$4.99</span>
+                                </h2>
+                                    <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/buffet.png" alt="buffet" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Weekend Grand Buffet
+                                <span class="badge badge-danger">NEW</span>
+                                </h2>
+                                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/alberto.png" alt="alberto" class="d-block img-fluid">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>Alberto Somayya</h2>
+                                <h4>Executive Chef</h4>
+                                <p>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    
+                            </div>
+                        </div>
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a href="#mycarousel" class="carousel-control-prev" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a href="#mycarousel" class="carousel-control-next" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
         <div class="row row-content align-items-center">
             <div class="col-12 col-sm-4 order-sm-last col-md-3">
                 <h3>Our Lipsmacking Culinary Creations</h3>
@@ -105,63 +204,18 @@
             </div>
         </div>
 
-        <div id="form" class="row row-content align-items-center justify-content-center">
+      <!--  <div id="form" class="row row-content align-items-center justify-content-center">
             <div class="col-12 col-sm-8">
                 <div class="card alig">
                     <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
                     <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="numberofguests" class="col-md-2 col-form-label"><strong>Number of Guests</strong></label>
-                                    <div class="custom-control custom-radio align-self-center ml-3">
-                                        <input type="radio" class="custom-control-input" id="one" name="one">
-                                        <label class="custom-control-label" for="one"><strong>1&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
-                                    </div>
-                                    <div class="custom-control custom-radio align-self-center">
-                                        <input type="radio" class="custom-control-input" id="two" name="one">
-                                        <label class="custom-control-label" for="two"><strong>2&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
-                                    </div>
-                                    <div class="custom-control custom-radio align-self-center">
-                                        <input type="radio" class="custom-control-input" id="three" name="one">
-                                        <label class="custom-control-label" for="three"><strong>3&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
-                                    </div>
-                                    <div class="custom-control custom-radio align-self-center">
-                                        <input type="radio" class="custom-control-input" id="four" name="one">
-                                        <label class="custom-control-label" for="four"><strong>4&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>  
-                                    </div>
-                                    <div class="custom-control custom-radio align-self-center">
-                                        <input type="radio" class="custom-control-input" id="five" name="one">
-                                        <label class="custom-control-label" for="five"><strong>5&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>  
-                                    </div>
-                                    <div class="custom-control custom-radio align-self-center">
-                                        <input type="radio" class="custom-control-input" id="six" name="one">
-                                        <label class="custom-control-label" for="six"><strong>6&nbsp;&nbsp;</strong></label>  
-                                    </div>
-                            </div>
-                            
-                            <div class="form-group row">
-                                <label for="date&time" class="col-md-2 col-form-label"><strong>Date and Time</strong></label>
-                                <div class="col-md-3">
-                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                                </div>
-                                <div class="col-md-3">
-                                    <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                                
-                            
-                        </form>
+                        
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
+-->
     <footer class="footer">
         <div class="container">
             <div class="row">             
@@ -207,6 +261,88 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--
+    <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+-->
+<div id="reserveTableModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"> Reserve a Table</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group row">
+                        <label for="numberofguests" class="col-md-2 col-form-label"><strong>Number of Guests</strong></label>
+                            <div class="custom-control custom-radio align-self-center ml-3">
+                                <input type="radio" class="custom-control-input" id="one" name="one">
+                                <label class="custom-control-label" for="one"><strong>1&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+                            </div>
+                            <div class="custom-control custom-radio align-self-center">
+                                <input type="radio" class="custom-control-input" id="two" name="one">
+                                <label class="custom-control-label" for="two"><strong>2&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+                            </div>
+                            <div class="custom-control custom-radio align-self-center">
+                                <input type="radio" class="custom-control-input" id="three" name="one">
+                                <label class="custom-control-label" for="three"><strong>3&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>
+                            </div>
+                            <div class="custom-control custom-radio align-self-center">
+                                <input type="radio" class="custom-control-input" id="four" name="one">
+                                <label class="custom-control-label" for="four"><strong>4&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>  
+                            </div>
+                            <div class="custom-control custom-radio align-self-center">
+                                <input type="radio" class="custom-control-input" id="five" name="one">
+                                <label class="custom-control-label" for="five"><strong>5&nbsp;&nbsp;&nbsp;&nbsp;</strong></label>  
+                            </div>
+                            <div class="custom-control custom-radio align-self-center">
+                                <input type="radio" class="custom-control-input" id="six" name="one">
+                                <label class="custom-control-label" for="six"><strong>6&nbsp;&nbsp;</strong></label>  
+                            </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="section" class="col-md-2 col-form-label"><strong>Section</strong></label>
+                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                            <label class="btn btn-success active ml-3">
+                              <input type="radio" name="section" id="nonSmoking" checked> Non Smoking
+                            </label>
+                            <label class="btn btn-danger">
+                              <input type="radio" name="section" id="smoking"> Smoking
+                            </label>
+                        </div>
+                        
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="date&time" class="col-md-2 col-form-label"><strong>Date and Time</strong></label>
+                        <div class="col-md-3">
+                            <input type="date" class="form-control" id="date" name="date" placeholder="Date">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="time" class="form-control" id="time" name="time" placeholder="Time">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                            <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary ">Reserve</button>
+                        </div>
+                        
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 
 </html>
