@@ -66,3 +66,9 @@ body {
     left: 20em;
     text-align: left;
 }
+
+#carouselButton {
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
